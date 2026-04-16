@@ -66,7 +66,7 @@ export function Services() {
           <span className="reveal text-xs font-semibold uppercase tracking-[0.3em] text-neon-cyan">
             Hizmetlerimiz
           </span>
-          <h2 className="reveal mt-3 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+          <h2 className="reveal mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
             Uçtan uca <span className="gradient-text">dijital çözümler</span>
           </h2>
           <p className="reveal mt-5 text-foreground-muted">

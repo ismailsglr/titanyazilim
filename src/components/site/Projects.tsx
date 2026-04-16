@@ -57,7 +57,7 @@ export function Projects() {
           <span className="reveal text-xs font-semibold uppercase tracking-[0.3em] text-neon-cyan">
             Projelerimiz
           </span>
-          <h2 className="reveal mt-3 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+          <h2 className="reveal mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
             Hayata geçirdiğimiz <span className="gradient-text">ürünler</span>
           </h2>
         </div>
