@@ -1,26 +1,51 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Toaster } from "@/components/ui/sonner";
+import { Preloader } from "@/components/site/Preloader";
+import { Navbar } from "@/components/site/Navbar";
+import { Hero } from "@/components/site/Hero";
+import { About } from "@/components/site/About";
+import { Services } from "@/components/site/Services";
+import { Technologies } from "@/components/site/Technologies";
+import { Projects } from "@/components/site/Projects";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Titan Yazılım — Premium Yazılım Geliştirme Stüdyosu" },
+      {
+        name: "description",
+        content:
+          "Titan Yazılım, kurumsal yazılım, web ve mobil uygulama, bulut altyapı ve yapay zeka çözümleri sunan premium bir yazılım stüdyosudur.",
+      },
+      { property: "og:title", content: "Titan Yazılım — Premium Yazılım Stüdyosu" },
+      {
+        property: "og:description",
+        content:
+          "Modern teknolojilerle ölçeklenebilir dijital ürünler. Web, mobil, bulut ve AI çözümleri.",
+      },
+      { property: "og:type", content: "website" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="relative min-h-screen overflow-hidden bg-background text-foreground">
+      <Preloader />
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Services />
+        <Technologies />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
+      <Toaster theme="dark" position="top-right" />
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
