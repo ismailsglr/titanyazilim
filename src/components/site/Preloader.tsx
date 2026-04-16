@@ -5,6 +5,16 @@ export function Preloader() {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
+    // Sayfa yenilendiğinde hash varsa temizle ve en üste git
+    if (typeof window !== "undefined") {
+      if (window.location.hash) {
+        history.replaceState(null, "", window.location.pathname);
+      }
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+      window.scrollTo(0, 0);
+    }
     const start = performance.now();
     const duration = 1400;
     let raf = 0;
