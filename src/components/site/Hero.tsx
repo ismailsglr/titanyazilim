@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { HlsVideo } from "./HlsVideo";
 
 export function Hero() {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -61,20 +62,23 @@ export function Hero() {
       id="anasayfa"
       className="relative flex min-h-screen items-center overflow-hidden pt-28"
     >
-      {/* Background layers */}
-      <div className="absolute inset-0 bg-grid opacity-40" />
-      <div
-        className="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full opacity-60 blur-3xl animate-float"
-        style={{ background: "radial-gradient(circle, hsl(var(--neon-purple) / 0.4), transparent 70%)" }}
-      />
-      <div
-        className="absolute -bottom-40 -right-40 h-[600px] w-[600px] rounded-full opacity-50 blur-3xl animate-float-slow"
-        style={{ background: "radial-gradient(circle, hsl(var(--neon-cyan) / 0.35), transparent 70%)" }}
-      />
-      <div
-        className="absolute top-1/3 right-1/4 h-[300px] w-[300px] rounded-full opacity-40 blur-3xl animate-pulse-glow"
-        style={{ background: "radial-gradient(circle, hsl(var(--neon-blue) / 0.4), transparent 70%)" }}
-      />
+      {/* Background video */}
+      <div className="absolute inset-0 overflow-hidden">
+        <HlsVideo
+          src="https://stream.mux.com/9JXDljEVWYwWu01PUkAemafDugK89o01BR6zqJ3aS9u00A.m3u8"
+          className="absolute inset-0 h-full w-full object-cover opacity-60"
+        />
+        <div className="absolute inset-0 bg-background/55" />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse at 30% 20%, hsl(var(--neon-purple) / 0.35), transparent 55%), radial-gradient(ellipse at 70% 80%, hsl(var(--neon-cyan) / 0.25), transparent 55%)",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
+      </div>
+      <div className="absolute inset-0 bg-grid opacity-15" />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5 lg:px-8">
         <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
@@ -85,7 +89,7 @@ export function Hero() {
 
           <h1
             ref={titleRef}
-            className="text-4xl font-black leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
+            className="font-display text-5xl font-semibold leading-[0.95] tracking-tight sm:text-7xl lg:text-[5.5rem]"
           >
             {titleParts.map((p, i) => (
               <span key={i} className="word inline-block pr-3">
