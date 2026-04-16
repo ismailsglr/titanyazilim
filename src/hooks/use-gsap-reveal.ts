@@ -24,20 +24,20 @@ export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(
     const targets = ref.current.querySelectorAll(selector);
     if (!targets.length) return;
 
-    gsap.set(targets, { opacity: 1 });
+    gsap.set(targets, { opacity: 1, filter: "none" });
 
     const ctx = gsap.context(() => {
       gsap.from(targets, {
         opacity: 0,
         y: isMobile ? 20 : y,
-        filter: isMobile ? "none" : "blur(8px)",
         duration: isMobile ? 0.5 : duration,
         delay,
         stagger: isMobile ? 0.05 : stagger,
         ease: "power3.out",
+        clearProps: "filter,transform",
         scrollTrigger: {
           trigger: ref.current,
-          start: "top 85%",
+          start: "top 90%",
           toggleActions: "play none none none",
         },
       });
