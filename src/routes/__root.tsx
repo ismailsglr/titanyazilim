@@ -29,16 +29,33 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Titan Yazılım — Dijital Vizyonunuzu Kodluyoruz" },
+      {
+        name: "description",
+        content:
+          "Titan Yazılım; web, mobil ve kurumsal yazılım çözümleriyle markanızı dijitalde bir adım öne taşır.",
+      },
+      { name: "author", content: "Titan Yazılım" },
+      { property: "og:title", content: "Titan Yazılım — Dijital Vizyonunuzu Kodluyoruz" },
+      {
+        property: "og:description",
+        content:
+          "Web, mobil ve kurumsal yazılım çözümlerinde uçtan uca premium teknoloji partneri.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:image", content: "/og-image.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Titan Yazılım" },
+      {
+        name: "twitter:description",
+        content:
+          "Web, mobil ve kurumsal yazılım çözümlerinde uçtan uca premium teknoloji partneri.",
+      },
+      { name: "twitter:image", content: "/og-image.jpg" },
     ],
     links: [
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
+      { rel: "apple-touch-icon", href: "/favicon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
