@@ -22,7 +22,7 @@ export function About() {
             <div className="relative h-full w-full overflow-hidden rounded-full neon-border transition-transform duration-500 hover:scale-105">
               <img
                 src={aboutImg}
-                alt="Titan Yazılım ekibi modern ofiste çalışırken"
+                alt="Titan Yazılım holografik kod arayüzleri ile teknoloji vizyonu"
                 width={1024}
                 height={1024}
                 loading="lazy"
