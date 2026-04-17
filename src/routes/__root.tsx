@@ -45,13 +45,16 @@ export const Route = createRootRoute({
       { property: "og:type", content: "website" },
       { property: "og:image", content: "/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Titan Yazılım" },
+      { name: "twitter:title", content: "Titan Yazılım — Dijital Vizyonunuzu Kodluyoruz" },
       {
         name: "twitter:description",
         content:
           "Web, mobil ve kurumsal yazılım çözümlerinde uçtan uca premium teknoloji partneri.",
       },
       { name: "twitter:image", content: "/og-image.jpg" },
+      { name: "description", content: "Titan Yazılım; web, mobil ve kurumsal yazılım çözümleriyle markanızı dijitalde bir adım öne taşır" },
+      { property: "og:description", content: "Titan Yazılım; web, mobil ve kurumsal yazılım çözümleriyle markanızı dijitalde bir adım öne taşır" },
+      { name: "twitter:description", content: "Titan Yazılım; web, mobil ve kurumsal yazılım çözümleriyle markanızı dijitalde bir adım öne taşır" },
     ],
     links: [
       { rel: "icon", type: "image/png", href: "/favicon.png" },
